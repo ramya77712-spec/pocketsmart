@@ -1,0 +1,156 @@
+{
+  "personas": [
+    {
+      "id": "student",
+      "name": "College Student",
+      "description": "Managing finances on a tight budget while studying",
+      "demographics": {
+        "ageRange": "18-25",
+        "income": "$1,500/month",
+        "livingSituation": "Shared housing",
+        "primaryConcerns": ["Debt management", "Basic budgeting", "Future planning"]
+      },
+      "financialProfile": {
+        "monthlyIncome": 1500,
+        "savingsTarget": 200,
+        "riskTolerance": "low",
+        "primaryGoals": ["Emergency fund", "Graduation debt-free", "First job preparation"]
+      },
+      "typicalExpenses": [
+        {"category": "rent", "amount": 600, "type": "needs", "description": "Shared apartment"},
+        {"category": "groceries", "amount": 200, "type": "needs", "description": "Basic groceries"},
+        {"category": "transportation", "amount": 80, "type": "needs", "description": "Public transport"},
+        {"category": "textbooks", "amount": 100, "type": "needs", "description": "Course materials"},
+        {"category": "dining", "amount": 150, "type": "wants", "description": "Eating out"},
+        {"category": "entertainment", "amount": 100, "type": "wants", "description": "Movies, games"},
+        {"category": "subscriptions", "amount": 25, "type": "luxuries", "description": "Streaming services"}
+      ],
+      "challenges": [
+        "Limited income from part-time work",
+        "Irregular expenses (textbooks, supplies)",
+        "Social pressure to spend",
+        "Lack of financial education"
+      ],
+      "opportunities": [
+        "Low fixed expenses",
+        "Time to build good habits",
+        "Access to student discounts",
+        "Potential for income growth after graduation"
+      ]
+    },
+    {
+      "id": "freelancer",
+      "name": "Freelancer",
+      "description": "Variable income with irregular cash flow",
+      "demographics": {
+        "ageRange": "25-40",
+        "income": "$3,500/month (variable)",
+        "livingSituation": "Independent",
+        "primaryConcerns": ["Income stability", "Tax planning", "Retirement savings"]
+      },
+      "financialProfile": {
+        "monthlyIncome": 3500,
+        "savingsTarget": 700,
+        "riskTolerance": "medium",
+        "primaryGoals": ["6-month emergency fund", "Retirement planning", "Business growth"]
+      },
+      "typicalExpenses": [
+        {"category": "rent", "amount": 1200, "type": "needs", "description": "Home office rent"},
+        {"category": "utilities", "amount": 150, "type": "needs", "description": "Internet, electricity"},
+        {"category": "groceries", "amount": 300, "type": "needs", "description": "Weekly shopping"},
+        {"category": "insurance", "amount": 200, "type": "needs", "description": "Health insurance"},
+        {"category": "business", "amount": 250, "type": "needs", "description": "Software, tools"},
+        {"category": "dining", "amount": 200, "type": "wants", "description": "Client meetings"},
+        {"category": "coworking", "amount": 150, "type": "wants", "description": "Coworking space"},
+        {"category": "courses", "amount": 100, "type": "luxuries", "description": "Skill development"}
+      ],
+      "challenges": [
+        "Irregular income patterns",
+        "Self-employment taxes",
+        "No employer benefits",
+        "Feast or famine cycles"
+      ],
+      "opportunities": [
+        "High earning potential",
+        "Tax deduction opportunities",
+        "Flexible schedule for side income",
+        "Direct control over income growth"
+      ]
+    },
+    {
+      "id": "working-parent",
+      "name": "Working Parent",
+      "description": "Balancing family expenses with career growth",
+      "demographics": {
+        "ageRange": "30-45",
+        "income": "$5,500/month",
+        "livingSituation": "Family home",
+        "primaryConcerns": ["Children's future", "Work-life balance", "College savings"]
+      },
+      "financialProfile": {
+        "monthlyIncome": 5500,
+        "savingsTarget": 800,
+        "riskTolerance": "medium",
+        "primaryGoals": ["Children's education", "Family emergency fund", "Retirement planning"]
+      },
+      "typicalExpenses": [
+        {"category": "rent", "amount": 1800, "type": "needs", "description": "Family home"},
+        {"category": "utilities", "amount": 200, "type": "needs", "description": "All utilities"},
+        {"category": "groceries", "amount": 600, "type": "needs", "description": "Family groceries"},
+        {"category": "childcare", "amount": 800, "type": "needs", "description": "Daycare/babysitter"},
+        {"category": "insurance", "amount": 400, "type": "needs", "description": "Family insurance"},
+        {"category": "transportation", "amount": 300, "type": "needs", "description": "Car payments/gas"},
+        {"category": "education", "amount": 200, "type": "wants", "description": "Kids activities"},
+        {"category": "dining", "amount": 250, "type": "wants", "description": "Family dining out"},
+        {"category": "entertainment", "amount": 150, "type": "wants", "description": "Family activities"},
+        {"category": "subscriptions", "amount": 50, "type": "luxuries", "description": "Streaming, apps"}
+      ],
+      "challenges": [
+        "High childcare costs",
+        "Multiple financial priorities",
+        "Limited time for financial planning",
+        "Pressure to provide for family"
+      ],
+      "opportunities": [
+        "Stable dual income potential",
+        "Tax benefits for families",
+        "Long-term investment horizon",
+        "Motivation for financial discipline"
+      ]
+    }
+  ],
+  "scenarioTemplates": [
+    {
+      "id": "new-job",
+      "title": "Starting a New Job",
+      "description": "You just got a new job with a 20% salary increase. How should you adjust your financial plan?",
+      "applicablePersonas": ["student", "young-professional"],
+      "decisions": [
+        {
+          "question": "What should you do with the extra income?",
+          "options": [
+            {"text": "Increase lifestyle spending proportionally", "impact": "lifestyle_inflation"},
+            {"text": "Save 50% of the increase, spend 50%", "impact": "balanced_growth"},
+            {"text": "Save 100% of the increase", "impact": "aggressive_savings"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unexpected-expense",
+      "title": "Emergency Car Repair",
+      "description": "Your car needs a $1,500 repair. You have $800 in emergency savings.",
+      "applicablePersonas": ["all"],
+      "decisions": [
+        {
+          "question": "How do you handle this expense?",
+          "options": [
+            {"text": "Use credit card for the full amount", "impact": "debt_increase"},
+            {"text": "Use emergency fund + credit card for remainder", "impact": "mixed_funding"},
+            {"text": "Delay repair and save up", "impact": "delayed_expense"}
+          ]
+        }
+      ]
+    }
+  ]
+}

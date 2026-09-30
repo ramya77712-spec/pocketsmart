@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Inter font for better Hindi support */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Base font family with Hindi support */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif;
+}
+
+/* Hindi font support */
+[lang="hi"], [lang="hi"] * {
+  font-family: 'Inter', 'Noto Sans Devanagari', 'Mangal', 'Kokila', 'Utsaah', sans-serif;
+}
+
+/* Accessibility Enhancements */
+.high-contrast {
+  --tw-bg-opacity: 1;
+  --tw-text-opacity: 1;
+}
+
+.high-contrast * {
+  border-color: currentColor !important;
+}
+
+.high-contrast .bg-white {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 2px solid #000000 !important;
+}
+
+.high-contrast .bg-gray-50 {
+  background-color: #f9fafb !important;
+  color: #000000 !important;
+  border: 1px solid #000000 !important;
+}
+
+.high-contrast .text-gray-600 {
+  color: #000000 !important;
+  font-weight: 600 !important;
+}
+
+.high-contrast .text-gray-800 {
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+
+/* Focus indicators */
+*:focus {
+  outline: 2px solid #3B82F6;
+  outline-offset: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Font scaling */
+html {
+  font-size: calc(16px * var(--font-scale, 1));
+}
+
+/* Animation duration override for accessibility */
+* {
+  animation-duration: var(--animation-duration, initial);
+  transition-duration: var(--animation-duration, initial);
+}
+
+/* Skip links for screen readers */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #3B82F6;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* High contrast mode improvements */
+@media (prefers-contrast: high) {
+  .high-contrast {
+    filter: contrast(150%);
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  * {
+    background: white !important;
+    color: black !important;
+  }
+}
+/* RTL support for Hindi (if needed in future) */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .flex {
+  flex-direction: row-reverse;
+}
+
+/* Stress indicator animations */
+@keyframes stress-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.stress-indicator {
+  animation: stress-pulse 2s infinite;
+}
+
+/* Success celebration */
+@keyframes celebrate {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.celebrate {
+  animation: celebrate 0.6s ease-in-out;
+}
